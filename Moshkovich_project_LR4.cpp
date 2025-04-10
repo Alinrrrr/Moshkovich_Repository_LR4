@@ -12,6 +12,18 @@ void EnterNumberX() {
 void EnterCalcNumber() {
 }
 void EnterNumberKonec() {
+    int X;
+    cout << "Введите натуральное число: "; cin >> X;
+    if (X == int(X) && X > 0) {
+        if ((X % 10) % 2 != 0) {
+            cout << "Число заканчивается нечётной цифрой." << endl;
+        }
+        else {
+            cout << "Число заканчивается чётной цифрой,введите другое число." << endl;
+        }
+    } else {
+        cout << "Число " << X << " не натуральное.\n";
+    }
 }
 bool UserInputDbl(string input) {
     //если строка пустая - ввод некорректен
