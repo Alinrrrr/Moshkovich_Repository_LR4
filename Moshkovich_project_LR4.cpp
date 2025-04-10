@@ -10,6 +10,26 @@ double X = 0;
 void EnterNumberX() {
 }
 void EnterCalcNumber() {
+    int X, Z;
+    cout << "Введите натуральное число: "; cin >> X;
+    if (X == int(X) && X > 0) {
+        int chislo = 0;
+        int count = 0;
+        while (X) {
+            Z = X % 10;
+            if (count == 0)
+                chislo = Z;
+            count++;
+            X /= 10;
+        }
+        if (chislo == Z) cout << "Начальная и конечная цифры в числе одинаковые" << endl;
+        else {
+            cout << "Начальная и конечная цифры в числе разные" << endl;
+        }
+    }
+    else {
+        cout << "Число " << X << " не натуральное.\n";
+    }
 }
 void EnterNumberKonec() {
 }
