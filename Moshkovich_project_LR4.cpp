@@ -8,6 +8,15 @@
 using namespace std;
 double X = 0;
 void EnterNumberX() {
+    double X;
+    cout << "Введите натуральное число: ";cin >> X;
+    if (X == int(X) && X > 0) {
+        cout << "Число " << X << " натуральное!\n";
+    }
+    else {
+        cout << "Число " << X << " не натуральное.\n";
+    }
+    cout << endl;
 }
 void EnterCalcNumber() {
 }
